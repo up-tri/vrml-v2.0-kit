@@ -1,0 +1,84 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control",
+					"match": "DEF|USE|ROUTE|TO|TRUE|FALSE"
+				},
+				{
+					"name": "variable.parameter",
+					"match": "\\b(?<=DEF)[\\s]+[a-zA-Z0-9\\-_]+\\b"
+				},
+				{
+					"name": "variable.parameter",
+					"match": "\\b(?<=USE)[\\s]+[a-zA-Z0-9\\-_]+\\b"
+				},
+				{
+					"name": "variable.parameter",
+					"match": "\\b(?<=ROUTE)[\\s]+[a-zA-Z0-9\\-_]+\\b"
+				},
+				{
+					"name": "variable.parameter",
+					"match": "\\b(?<=TO)[\\s]+[a-zA-Z0-9\\-_]+\\b"
+				},
+				{
+					"name": "strong",
+					"match": "^#VRML V[\\d\\.]+ utf8"
+				},
+				{
+					"name": "support.class",
+					"match": "\\b(Shape|Transform|Group|Viewpoint|Background)\\b"
+				},
+				{
+					"name": "comment.line",
+					"match": "#.+$"
+				},
+				{
+					"name": "variable.language",
+					"match": "\\b(appearance|geometry)\\b"
+				},
+				{
+					"name": "variable.parameter",
+					"match": "\\b(var|[^\\x01-\\x7E]+)\\b"
+				},
+				{
+					"name": "support.function",
+					"match": "\\b(Sphere|Box|Cone|Cylinder|Text|FontStyle|Extrusion|ElevationGrid|IndexedFaceSet|IndexedFaceSet|PointSet|Coordinate|Normal|Color|Appearance|Material|ImageTexture|TextureTransform|TimeSensor|OrientationInterpolator|PositionInterpolator|ScalarInterpolator)\\b"
+				},
+				{
+					"name": "support.function",
+					"match": "\\b(?<=\\.)(fraction_changed|set_fraction|touchTime|startTime|value_changed|rotation|translation|transparency)\\b"
+				},{
+					"name": "variable.parameter",
+					"match": "^(\\s*)(set_bind|bottomUrl|topUrl|isBoundradius|size|bottomRadius|height|bottom|side|radius|top|side|string|fontStyle|length|maxExtent|family|style|spacing|horizontal|leftToRight|topToBottom|justify|language|creaseAngle|ccw|convex|solid|beginCap|endCap|crossSection|scale|orientation|spine|colorPerVertex|normalPerVertex|color|normal|texCoord|xDimension|zDimension|xSpacing|zSpacing|colorIndex|normalIndex|texCoordIndex|coord|coordIndex|point|vector|material|texture|textureTransform|ambientIntensity|diffuseColor|specularColor|shininess|emissiveColor|transparency|url|repeatS|repeatT|translation|direction|intensity|on|ambientIntensity|location|attenuation|beamWidth|cutOffAngle|bboxCenter|bboxSize|scaleOrientation|children|rotation|axisOfRotation|avatarSize|headlight|speed|type|visibilityLimit|skyColor|skyAngle|groundColor|groundAngle|backUrl|frontUrl|leftUrl|rightUrl|topUrlbottomUrl|position|key|keyValue|cycleInterval|enabled|loop|startTime|stopTime|cycleTime|fraction_changed|isActive|time)\\b"
+				},{
+					"name": "constant.numeric",
+					"match": "\\b[\\d\\.\\-]+\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.VRML",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.VRML",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.vrml"
+}

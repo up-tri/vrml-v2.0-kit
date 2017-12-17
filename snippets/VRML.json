@@ -1,0 +1,300 @@
+{
+    "VRML": {
+        "prefix": "VRML",
+        "body": [
+            "#VRML V2.0 utf8"
+        ],
+        "description": "VRML v2.0 ファイルの開始宣言"
+    },
+    "DEF": {
+        "prefix": "DEF",
+        "body": [
+            "DEF ${1:valiable}"
+        ],
+        "description": "ノードに命名します。"
+    },
+    "Shape": {
+        "prefix": "Shape",
+        "body": [
+            "Shape {",
+            "\tgeometry ${1:形状}",
+            "\tappearance ${2:見かけ}",
+            "}"
+        ],
+        "description": "物体のノードです。 geometry フィールドに形状を指定します。 appearance フィールドには色などの属性情報を指定します。"
+    },
+    "Sphere": {
+        "prefix": "Sphere",
+        "body": [
+            "Sphere {",
+            "\tradius ${1:半径}",
+            "}"
+        ],
+        "description": "Shape ノードの geometry フィールドに指定する、球の形状のノードです。"
+    },
+    "Box": {
+        "prefix": "Box",
+        "body": [
+            "Box {",
+            "\tsize ${1:座標ｘ} ${2:座標ｙ} ${3:座標ｚ}",
+            "}"
+        ],
+        "description": "Shape ノードの geometry フィールドに指定する、直方体の形状のノードです。"
+    },
+    "Cone": {
+        "prefix": "Cone",
+        "body": [
+            "Cone {",
+            "\tbottomRadius ${1:底面の半径}",
+            "\theight ${2:高さ}",
+            "\tbottom ${3:底面の有無}",
+            "\tside ${4:側面の有無}",
+            "}"
+        ],
+        "description": "Shape ノードの geometry フィールドに指定する、円錐の形状のノードです。"
+    },
+    "Cylinder": {
+        "prefix": "Cylinder",
+        "body": [
+            "Cylinder {",
+            "\tradius ${1:半径}",
+            "\theight ${2:高さ}",
+            "\tbottom ${3:底面の有無}",
+            "\ttop ${4:上面の有無}",
+            "\tside ${5:側面の有無}",
+            "}"
+        ],
+        "description": "Shape ノードの geometry フィールドに指定する、円筒の形状のノードです。"
+    },
+    "Text": {
+        "prefix": "Text",
+        "body": [
+            "Text {",
+            "\tstring [${1:\"文字列1\", \"文字列2\", .. }]",
+            "\tfontStyle ${2:字体}",
+            "\tlength [${3:文字列1の長さ, 文字列2の長さ, .. }]",
+            "\tmaxExtent ${4:文字列の最大長}",
+            "}"
+        ],
+        "description": "Shape ノードの geometry フィールドに指定する、文字の形状のノードです。"
+    },
+    "FontStyle": {
+        "prefix": "FontStyle",
+        "body": [
+            "FontStyle {",
+            "\tfamily ${1:字体}",
+            "\tstyle ${2:文字スタイル}",
+            "\tsize ${3:文字サイズ}",
+            "\tspacing ${4:文字間隔}",
+            "\thorizontal ${5:縦書きか横書きか}",
+            "\tleftToRight ${6:文字を左から右に書くか否か}",
+            "\ttopToBottom ${7:文字を上から下に書くか否か}",
+            "\tjustify ${8:文字揃え}",
+            "\tlanguage ${9:言語}",
+            "}"
+        ]
+    },
+    "Extrusion": {
+        "prefix:": "Extrusion",
+        "body": [
+            "Extrusion {",
+            "\tcreaseAngle ${1:スムーズシェーディングするときの限界角}",
+            "\tccw ${2:頂点の順序が反時計回りか否か}",
+            "\tconvex ${3:面がすべて凸多角形か否か}",
+            "\tsolid ${4:閉じた形状か否か}",
+            "\tbeginCap ${5:最初の断面のフタの有無}",
+            "\tendCap ${6:最後の断面のフタの有無}",
+            "\tcrossSection [${7:断面の座標0, 断面の座標1, .. }]",
+            "\tscale [${8:断面0の拡大率, 断面1の拡大率, .. }]",
+            "\torientation [${9:断面0の向き, 断面1の向き, .. }]",
+            "\tspine [${10:回転軸の座標0, 回転軸の座標1, .. }]",
+            "}"
+        ],
+        "description": "Shape ノードの geometry フィールドに指定する、押し出し形状のノードです。"
+    },
+    "ElevationGrid": {
+        "prefix": "ElevationGrid",
+        "body": [
+            "ElevationGrid {",
+            "\tcreaseAngle ${1:スムーズシェーディングするときの限界角}",
+            "\tccw ${2:頂点の順序が反時計回りか否か}",
+            "\tconvex ${3:面がすべて凸多角形か否か}",
+            "\tsolid ${4:閉じた形状か否か}",
+            "\tcolorPerVertex ${5:頂点ごとに色を与えるか否か}",
+            "\tnormalPerVertex ${6:頂点ごとに法線を与えるか否か}",
+            "\tcolor ${7:各面／頂点の色}",
+            "\tnormal ${8:各面／頂点の法線ベクトル}",
+            "\ttexCoord ${9:テクスチャの座標}",
+            "\txDimension ${10:x方向の格子点数}",
+            "\tzDimension ${11:z方向の格子点数}",
+            "\txSpacing ${12:x方向の格子点間隔}",
+            "\tzSpacing ${13:z方向の格子点間隔}",
+            "\theight [${14:格子点0の高さ, 格子点1の高さ, .. }]",
+            "}"
+        ],
+        "description": "Shape ノードの geometry フィールドに指定する、地形などを表現するための形状のノードです。"
+    },
+    "IndexedFaceSet": {
+        "prefix": "IndexedFaceSet",
+        "body": [
+            "IndexedFaceSet {",
+            "\tcreaseAngle ${1:スムーズシェーディングするときの限界角}",
+            "\tccw ${2:頂点の順序が反時計回りか否か}",
+            "\tconvex ${3:面がすべて凸多角形か否か}",
+            "\tsolid ${4:閉じた形状か否か}",
+            "\tcolorPerVertex ${5:頂点ごとに色を与えるか否か}",
+            "\tnormalPerVertex ${6:頂点ごとに法線を与えるか否か}",
+            "\tcolor ${7:各面／頂点の色}",
+            "\tnormal ${8:各面／頂点の法線ベクトル}",
+            "\ttexCoord ${9:テクスチャの座標}",
+            "\tcolorIndex ${10:色データの指標}",
+            "\tnormalIndex ${11:法線ベクトルデータの指標}",
+            "\ttexCoordIndex ${12:テクスチャ座標データの指標}",
+            "\tcoord ${13:座標データ}",
+            "\tcoordIndex ${14:面データ}",
+            "}"
+        ],
+        "description": "Shape ノードの geometry フィールドに指定する、任意の多面体形状（ポリゴン）を表現するための形状のノードです。"
+    },
+    "IndexedLineSet": {
+        "prefix": "IndexedLineSet",
+        "body": [
+            "IndexedLineSet {",
+            "\tcolorPerVertex ${1:頂点ごとに色を与えるか否か}",
+            "\tcolor ${2:各面／頂点の色}",
+            "\tcolorIndex ${3:色データの指標}",
+            "\tcoord ${4:座標データ}",
+            "\tcoordIndex ${5:面データ}",
+            "}"
+        ],
+        "description": "Shape ノードの geometry フィールドに指定する、任意の線図形を表現するための形状のノードです。"
+    },
+    "PointSet": {
+        "prefix": "PointSet", 
+        "body": [
+            "PointSet {",
+            "\tcolor ${1:点の色}",
+            "\tcoord ${2:座標データ}",
+            "}"
+        ],
+        "description": "Shape ノードの geometry フィールドに指定する、任意の点集合を表現するための形状のノードです。"
+    },
+    "Coordinate": {
+        "prefix": "Coordinate",
+        "body": [
+            "Coordinate {",
+            "\tpoint ${1:[ ... ]}",
+            "}"
+        ],
+        "description": "IndexedFaceSet ノード、IndexedLineSet ノード、PointSet ノードの coord フィールドに指定する、頂点の座標値を指定するためのノードです。"
+    },
+    "Normal": {
+        "prefix": "Normal",
+        "body": [
+            "Normal {",
+            "\tvector ${1:[ ... ]}",
+            "}"
+        ],
+        "description": "IndexedFaceSet ノード、ElevationGrid ノードの normal フィールドに指定する、面あるいは頂点の法線ベクトルを指定するためのノードです。"
+    },
+    "Color": {
+        "prefix": "Color",
+        "body": [
+            "Color {",
+            "\tcolor ${1:[ ... ]}",
+            "}"
+        ],
+        "description": "IndexedFaceSet ノード、IndexedLineSet ノード、ElevationGrid ノード、PointSet ノードの color フィールドに指定する、頂点の座標値を指定するためのノードです。"
+    },
+
+    "Appearance": {
+        "prefix": "Appearance",
+        "body": [
+            "Appearance {",
+            "\tmaterial ${1:材質}",
+            "\ttexture ${2:貼り付けるテクスチャ}",
+            "\ttextureTransform ${3:テクスチャの貼り付け位置}",
+            "}"
+        ],
+        "description": "物体の表面の色やテキスチャの設定をします。"
+    },
+    "Material": {
+        "prefix": "Material",
+        "body": [
+            "Material {",
+            "\tambientIntensity ${1:環境光の反射率}",
+            "\tdiffuseColor ${2:r g b}",
+            "\tspecularColor ${3:r g b}",
+            "\tshininess ${4:輝き}",
+            "\temissiveColor ${5:r g b}",
+            "\ttransparency ${6:透明度}",
+            "}"
+        ],
+        "description": "物体表面の材質パラメータを指定します。 Appearance ノードの material フィールドで使用します。"
+    },
+    "ImageTexture": {
+        "prefix": "ImageTexture",
+        "body": [
+            "ImageTexture {",
+            "\turl ${1:画像ファイルのurl}",
+            "\trepeatS ${2:画像空間のS軸方向の繰り返し}",
+            "\trepeatT ${3:画像空間のT軸方向の繰り返し}",
+            "}"
+        ],
+        "description": ""
+    },
+    "TextureTransform": {
+        "prefix": "TextureTransform",
+        "body": [
+            "TextureTransform {",
+            "\tcenter ${1:x y}",
+            "\trotation ${2:r}",
+            "\tscale ${3:x y}",
+            "\ttranslation ${4:x y}",
+            "}"
+        ],
+        "description": ""
+    },
+    "Group": {
+        "prefix": "Group",
+        "body": [
+            "Group {",
+            "children ${1}",
+            "}"
+        ]
+    },
+    "Transform": {
+        "prefix": "Transform",
+        "body": [
+            "Transform {",
+            "\ttranslation ${1:x y z}",
+            "\trotation ${2:x y z r}",
+            "\tscale ${3:x y z}",
+            "\tscaleOrientation ${4:x y z r}",
+            "\tbboxCenter ${5:外接箱の中心}",
+            "\tbboxSize ${6:外接箱サイズ}",
+            "\tchildren [${7:コドモ コドモ ...}]",
+            "}"
+        ]
+    },
+    "Background": {
+        "prefix": "Background",
+        "body": [
+            "Background {",
+            "\tset_bind ${1:var}",
+            "\tgroundAngle ${2:var}",
+            "\tgroundColor ${3:var}",
+            "\tbackUrl ${4:var}",
+            "\tbottomUrl ${5:var}",
+            "\tfrontUrl ${6:var}",
+            "\tleftUrl ${7:var}",
+            "\trightUrl ${8:var}",
+            "\ttopUrl ${9:var}",
+            "\tskyAngle ${10:var}",
+            "\tskyColor ${11:var}",
+            "\tisBound ${12:var}",
+            "}"
+        ],
+        "description": "3次元空間の背景を設定します。この背景は空間中で移動しても動きません。 テキスチャは地面・空に優先して表示されます。"
+    }
+}
