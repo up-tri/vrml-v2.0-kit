@@ -2,7 +2,7 @@
     "name": "wrl",
     "displayName": "VRML V2.0 Editing Kit",
     "description": "VSCode ext kit for VRML ver2.0",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "repository": {
         "type": "git",
         "url": "https://github.com/up-tri/vrml-v2.0-kit"
