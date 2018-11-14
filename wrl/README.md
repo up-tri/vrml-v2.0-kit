@@ -22,13 +22,11 @@ All node ( eg. Shape, Appearance, Geometry and more. )
 
 ## Release notes
 
-### 1.0.0
-
-Initial release of this.
+Check ![CHANGELOG.md](./CHANGELOG.md).
 
 ## Contact me
 
-- [GitHub](https://github.com/icetea78/vrml-v2.0-kit)
-- [my blog page](https://blog.icetea.me/vscode/vrml)
+- [GitHub](https://github.com/up-tri/vrml-v2.0-kit)
+- my blog page (under construction)
 
 **Enjoy!**

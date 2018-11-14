@@ -2,13 +2,17 @@
     "name": "vrml-v2.0-kit",
     "displayName": "VRML V2.0 Editing Kit",
     "description": "VSCode ext kit for VRML ver2.0",
-    "version": "0.0.1",
-    "publisher": "icetea",
+    "version": "1.0.1",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/up-tri/vrml-v2.0-kit"
+    },
+    "publisher": "up-tri",
     "engines": {
         "vscode": "^1.14.0"
     },
     "categories": [
-        "Languages"
+        "Programming Languages"
     ],
     "contributes": {
         "languages": [{
@@ -17,12 +21,10 @@
             "extensions": [".wrl"],
             "configuration": "./language-configuration.json"
         }],
-        "snippets": [
-            {
-                "language": "VRML",
-                "path": "./snippets/VRML.json"
-            }
-        ],
+        "snippets": [{
+            "language": "VRML",
+            "path": "./snippets/VRML.json"
+        }],
         "grammars": [{
             "language": "VRML",
             "scopeName": "source.vrml",
