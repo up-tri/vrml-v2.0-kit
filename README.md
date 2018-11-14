@@ -12,17 +12,17 @@ Current version is **NOT** corresponding to the English, Only Japanese.
 
 *You need to set color theme "Dark+"*
 
-![Syntax highlight sample](/up-tri/vrml-v2.0-kit/img/ss01.png)
+![Syntax highlight sample](img/ss01.png)
 
 - Snippets
 
 All node ( eg. Shape, Appearance, Geometry and more. )
 
-![Syntax highlight sample](/up-tri/vrml-v2.0-kit/img/ss02.gif)
+![Syntax highlight sample](img/ss02.gif)
 
 ## Release notes
 
-Check ![CHANGELOG.md](/up-tri/vrml-v2.0-kit/CHANGELOG.md).
+Check ![CHANGELOG.md](CHANGELOG.md).
 
 ## Contact me
 
